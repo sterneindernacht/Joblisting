@@ -1,16 +1,14 @@
-package sterneindernacht.com.github.joblisting.web;
+package sterneindernacht.com.github.joblisting.auth.web;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PostMapping;
-import sterneindernacht.com.github.joblisting.authorization.User;
-import sterneindernacht.com.github.joblisting.service.SecurityService;
-import sterneindernacht.com.github.joblisting.service.UserService;
-import sterneindernacht.com.github.joblisting.validator.UserValidator;
+import org.springframework.web.bind.annotation.*;
+import sterneindernacht.com.github.joblisting.auth.model.User;
+import sterneindernacht.com.github.joblisting.auth.service.SecurityService;
+import sterneindernacht.com.github.joblisting.auth.service.UserService;
+import sterneindernacht.com.github.joblisting.auth.validator.UserValidator;
 
 @Controller
 public class UserController {

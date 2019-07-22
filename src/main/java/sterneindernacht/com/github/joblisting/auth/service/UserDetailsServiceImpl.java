@@ -1,4 +1,19 @@
-package sterneindernacht.com.github.joblisting.service;
+package sterneindernacht.com.github.joblisting.auth.service;
+
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Role;
+import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
+import org.springframework.security.core.userdetails.*;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+import sterneindernacht.com.github.joblisting.auth.model.User;
+import sterneindernacht.com.github.joblisting.auth.repository.UserRepository;
+import sterneindernacht.com.github.joblisting.service.UserDetailsService;
+
+import java.util.HashSet;
+import java.util.Set;
 
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -8,16 +23,12 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import sterneindernacht.com.github.joblisting.authorization.Role;
-import sterneindernacht.com.github.joblisting.authorization.User;
-import sterneindernacht.com.github.joblisting.repository.UserRepository;
 
 import java.util.HashSet;
 import java.util.Set;
 
-
 @Service
-public class UserDetailsServiceImpl implements UserDetailsService{
+public class UserDetailsServiceImpl implements UserDetailsService {
     @Autowired
     private UserRepository userRepository;
 

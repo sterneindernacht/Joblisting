@@ -1,11 +1,11 @@
-package sterneindernacht.com.github.joblisting.service;
+package sterneindernacht.com.github.joblisting.auth.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
-import sterneindernacht.com.github.joblisting.authorization.User;
-import sterneindernacht.com.github.joblisting.repository.RoleRepository;
-import sterneindernacht.com.github.joblisting.repository.UserRepository;
+import sterneindernacht.com.github.joblisting.auth.model.User;
+import sterneindernacht.com.github.joblisting.auth.repository.RoleRepository;
+import sterneindernacht.com.github.joblisting.auth.repository.UserRepository;
 
 import java.util.HashSet;
 
@@ -21,7 +21,7 @@ public class UserServiceImpl implements UserService {
     @Override
     public void save(User user) {
         user.setPassword(bCryptPasswordEncoder.encode(user.getPassword()));
-        user.setRoles(new HashSet<>(roleRepository.findAll()));
+        user.setRoles(new HashSet(roleRepository.findAll()));
         userRepository.save(user);
     }
 
