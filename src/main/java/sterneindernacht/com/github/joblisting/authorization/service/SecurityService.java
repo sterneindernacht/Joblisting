@@ -1,4 +1,4 @@
-package sterneindernacht.com.github.joblisting.auth.service;
+package sterneindernacht.com.github.joblisting.authorization.service;
 
 public interface SecurityService {
     String findLoggedInUsername();

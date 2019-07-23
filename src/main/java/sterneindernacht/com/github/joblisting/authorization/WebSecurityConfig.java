@@ -1,4 +1,4 @@
-package sterneindernacht.com.github.joblisting.auth;
+package sterneindernacht.com.github.joblisting.authorization;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;

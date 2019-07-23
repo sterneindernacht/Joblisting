@@ -1,14 +1,14 @@
-package sterneindernacht.com.github.joblisting.auth.web;
+package sterneindernacht.com.github.joblisting.authorization.web;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
-import sterneindernacht.com.github.joblisting.auth.model.User;
-import sterneindernacht.com.github.joblisting.auth.service.SecurityService;
-import sterneindernacht.com.github.joblisting.auth.service.UserService;
-import sterneindernacht.com.github.joblisting.auth.validator.UserValidator;
+import sterneindernacht.com.github.joblisting.authorization.model.User;
+import sterneindernacht.com.github.joblisting.authorization.service.SecurityService;
+import sterneindernacht.com.github.joblisting.authorization.service.UserService;
+import sterneindernacht.com.github.joblisting.authorization.validator.UserValidator;
 
 @Controller
 public class UserController {
@@ -46,7 +46,7 @@ public class UserController {
     @GetMapping("/login")
     public String login(Model model, String error, String logout) {
         if (error != null)
-            model.addAttribute("error", "Your username and password is invalid.");
+            model.addAttribute("error", "Username or password is invalid.");
 
         if (logout != null)
             model.addAttribute("message", "You have been logged out successfully.");

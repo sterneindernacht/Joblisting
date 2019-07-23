@@ -1,12 +1,12 @@
-package sterneindernacht.com.github.joblisting.auth.validator;
+package sterneindernacht.com.github.joblisting.authorization.validator;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.validation.Errors;
 import org.springframework.validation.ValidationUtils;
 import org.springframework.validation.Validator;
-import sterneindernacht.com.github.joblisting.auth.model.User;
-import sterneindernacht.com.github.joblisting.auth.service.UserService;
+import sterneindernacht.com.github.joblisting.authorization.model.User;
+import sterneindernacht.com.github.joblisting.authorization.service.UserService;
 
 @Component
 public class UserValidator implements Validator {

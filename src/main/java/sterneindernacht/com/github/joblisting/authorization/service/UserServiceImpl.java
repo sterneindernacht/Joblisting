@@ -1,11 +1,11 @@
-package sterneindernacht.com.github.joblisting.auth.service;
+package sterneindernacht.com.github.joblisting.authorization.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
-import sterneindernacht.com.github.joblisting.auth.model.User;
-import sterneindernacht.com.github.joblisting.auth.repository.RoleRepository;
-import sterneindernacht.com.github.joblisting.auth.repository.UserRepository;
+import sterneindernacht.com.github.joblisting.authorization.model.User;
+import sterneindernacht.com.github.joblisting.authorization.repository.RoleRepository;
+import sterneindernacht.com.github.joblisting.authorization.repository.UserRepository;
 
 import java.util.HashSet;
 

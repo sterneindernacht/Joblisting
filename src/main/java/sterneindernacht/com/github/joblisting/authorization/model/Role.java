@@ -1,4 +1,4 @@
-package sterneindernacht.com.github.joblisting.auth.model;
+package sterneindernacht.com.github.joblisting.authorization.model;
 
 import javax.persistence.*;
 import java.util.Set;

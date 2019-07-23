@@ -1,4 +1,4 @@
-package sterneindernacht.com.github.joblisting.auth.service;
+package sterneindernacht.com.github.joblisting.authorization.service;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
