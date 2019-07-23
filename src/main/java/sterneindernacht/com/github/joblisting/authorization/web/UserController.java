@@ -11,6 +11,7 @@ import sterneindernacht.com.github.joblisting.authorization.service.UserService;
 import sterneindernacht.com.github.joblisting.authorization.validator.UserValidator;
 
 @Controller
+@RequestMapping
 public class UserController {
     @Autowired
     private UserService userService;
@@ -21,14 +22,14 @@ public class UserController {
     @Autowired
     private UserValidator userValidator;
 
-    @GetMapping("/registration")
+    @RequestMapping(value = "/registration", method = RequestMethod.GET)
     public String registration(Model model) {
         model.addAttribute("userForm", new User());
 
         return "registration";
     }
 
-    @PostMapping("/registration")
+    @RequestMapping(value = "/registration", method = RequestMethod.POST)
     public String registration(@ModelAttribute("userForm") User userForm, BindingResult bindingResult) {
         userValidator.validate(userForm, bindingResult);
 
@@ -43,7 +44,7 @@ public class UserController {
         return "redirect:/welcome";
     }
 
-    @GetMapping("/login")
+    @RequestMapping(value = "/login", method = RequestMethod.GET)
     public String login(Model model, String error, String logout) {
         if (error != null)
             model.addAttribute("error", "Username or password is invalid.");
@@ -54,7 +55,7 @@ public class UserController {
         return "login";
     }
 
-    @GetMapping({"/", "/welcome"})
+    @RequestMapping(value = "/welcome", method = RequestMethod.GET)
     public String welcome(Model model) {
         return "welcome";
     }
